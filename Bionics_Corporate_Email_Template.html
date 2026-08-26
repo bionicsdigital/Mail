@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bionics Enviro Tech | Nanozyme Bioculture</title>
+<style>
+body{margin:0;padding:0;background:#edf2f0;font-family:Arial,Helvetica,sans-serif;color:#173d36}
+table{border-collapse:collapse}
+img{display:block;border:0;max-width:100%;height:auto}
+a{text-decoration:none}
+.wrap{width:100%;background:#edf2f0;padding:24px 0}
+.container{width:600px;max-width:600px;margin:auto;background:#fff}
+.top{padding:9px 25px;text-align:right;font-size:10px;color:#7c8985}
+.header{padding:18px 28px;border-bottom:1px solid #e4ebe8}
+.logo{font-size:21px;font-weight:800;color:#08715c;letter-spacing:.5px}
+.logo small{display:block;font-size:8px;letter-spacing:2px;color:#75817e;margin-top:3px}
+.nav{text-align:right;font-size:10px}
+.nav a{color:#31564e}
+.hero{padding:34px 34px 32px;background:#e6f2ee;text-align:center}
+.kicker{font-size:10px;font-weight:700;letter-spacing:2px;color:#0b765f;text-transform:uppercase}
+.hero h1{font-size:34px;line-height:1.08;margin:10px 0;color:#123f36}
+.hero p{font-size:13px;line-height:1.55;color:#536660;max-width:475px;margin:0 auto 20px}
+.btn{display:inline-block;padding:12px 21px;background:#08745d;color:white;border-radius:22px;font-size:10px;font-weight:700}
+.image-wrap{padding:0 28px;background:#fff}
+.hero-image{width:100%;height:auto;border-radius:0 0 8px 8px}
+.section{padding:28px 17px 22px}
+.title{text-align:center;font-size:21px;margin:0 0 6px}
+.sub{text-align:center;font-size:11px;color:#75837f;margin:0 0 20px}
+.card{width:48%;vertical-align:top;background:#f5f9f7;border-radius:9px}
+.gap{width:4%}
+.cardpad{padding:14px}
+.photo{width:100%;height:150px;object-fit:cover;border-radius:7px;background:#dcece7}
+.card h3{font-size:16px;margin:12px 0 6px}
+.card p{font-size:10px;line-height:1.55;color:#5c6c67;margin:0 0 12px}
+.minirow{padding:0 17px 26px}
+.mini{width:31.5%;vertical-align:top;background:#fafbfa}
+.minigap{width:2.75%}
+.minipad{padding:10px}
+.mini img{width:100%;height:82px;object-fit:cover;border-radius:6px;background:#e9f2ef}
+.mini h4{font-size:12px;margin:8px 0 4px}
+.mini p{font-size:9px;line-height:1.45;color:#687671;margin:0}
+.feature{padding:28px 31px;background:#123f37;color:#fff}
+.feature h2{font-size:22px;margin:0 0 8px}
+.feature p{font-size:11px;line-height:1.6;color:#dce9e5;margin:0 0 17px}
+.feature .btn{background:#fff;color:#0a6a56}
+.industries{padding:25px 27px;text-align:center}
+.pill{display:inline-block;padding:7px 10px;margin:3px;background:#edf5f2;border-radius:18px;color:#315d53;font-size:9px;font-weight:700}
+.footer{background:#f3f7f5;text-align:center;padding:24px 25px}
+.footer strong{font-size:18px;color:#08715c}
+.footer p{font-size:9px;line-height:1.55;color:#7a8783;margin:7px 0}
+.footer a{color:#08715c}
+@media(max-width:620px){
+.container{width:100%!important}
+.nav{display:none}
+.hero h1{font-size:28px}
+.card,.mini{display:block!important;width:100%!important;margin-bottom:12px}
+.gap,.minigap{display:none}
+}
+
+.merits-section {
+    background: #f5faf8;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.merits-heading {
+    margin: 0 0 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #123f36;
+    font-weight: 700;
+}
+
+.merits-description {
+    margin: 0 auto 25px;
+    max-width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #667570;
+}
+
+/* Main circular infographic */
+.merits-chart {
+    position: relative;
+    width: 520px;
+    max-width: 100%;
+    height: 520px;
+    margin: 0 auto;
+}
+
+/* Individual merit cards */
+.merit {
+    position: absolute;
+    width: 145px;
+    min-height: 105px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+.merit-number {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    color: #123f36;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.merit-title {
+    display: block;
+    font-size: 11px;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.merit-text {
+    display: block;
+    font-size: 8.5px;
+    line-height: 1.35;
+}
+
+/* Center circle */
+.merit-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 205px;
+    height: 205px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 8px solid #e2efeb;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    display: table;
+    z-index: 10;
+}
+
+.merit-center-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.merit-center-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #123f36;
+    text-transform: uppercase;
+}
+
+/* 1 - Low Cost */
+.merit-1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #009b91;
+}
+
+/* 2 - Minimal Chemical */
+.merit-2 {
+    top: 45px;
+    right: 0;
+    background: #07539b;
+}
+
+/* 3 - COD */
+.merit-3 {
+    top: 205px;
+    right: 0;
+    background: #6420a5;
+}
+
+/* 4 - BOD */
+.merit-4 {
+    bottom: 25px;
+    right: 55px;
+    background: #e51b45;
+}
+
+/* 5 - DO */
+.merit-5 {
+    bottom: 25px;
+    left: 55px;
+    background: #72b900;
+}
+
+/* 6 - Colour */
+.merit-6 {
+    top: 205px;
+    left: 0;
+    background: #0795c8;
+}
+
+/* 7 - Odour / Zero Sludge */
+.merit-7 {
+    top: 45px;
+    left: 0;
+    background: #e78300;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+
+    .merits-section {
+        padding: 25px 10px;
+    }
+
+    .merits-chart {
+        width: 360px;
+        height: 520px;
+    }
+
+    .merit {
+        width: 125px;
+        min-height: 105px;
+        padding: 9px;
+    }
+
+    .merit-title {
+        font-size: 9px;
+    }
+
+    .merit-text {
+        font-size: 7px;
+    }
+
+    .merit-center {
+        width: 145px;
+        height: 145px;
+    }
+
+    .merit-center-title {
+        font-size: 15px;
+    }
+
+    .merit-1 {
+        top: 0;
+    }
+
+    .merit-2 {
+        top: 75px;
+        right: 0;
+    }
+
+    .merit-3 {
+        top: 210px;
+        right: 0;
+    }
+
+    .merit-4 {
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .merit-5 {
+        bottom: 20px;
+        left: 15px;
+    }
+
+    .merit-6 {
+        top: 210px;
+        left: 0;
+    }
+
+    .merit-7 {
+        top: 75px;
+        left: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+<table class="container" width="600" role="presentation">
+
+<tr><td class="top">Bionics Enviro Tech • Advanced Nanozyme Microbial Culture</td></tr>
+
+<tr><td class="header">
+<table width="100%" role="presentation"><tr>
+<td>
+<div class="logo">BIONICS <small>ENVIRO TECH</small></div>
+</td>
+<td class="nav">
+<a href="https://bionicsenvirotech.com/">Website</a>&nbsp;&nbsp;
+<a href="https://bionicsenvirotech.com/about-us/">About Us</a>&nbsp;&nbsp;
+<a href="https://bionicsenvirotech.com/contact-us/">Contact</a>
+</td>
+</tr></table>
+</td></tr>
+
+<!-- HERO -->
+<tr><td class="hero">
+<div class="kicker">Scientific Innovative Bioculture Manufacturer</div>
+<h1>Advanced Nanozyme<br>Bioculture for Cleaner Water</h1>
+<p>High-performance microbial solutions for ETP, STP, CETP, CSTP, anaerobic digesters and industrial wastewater treatment.</p>
+<a class="btn" href="https://bionicsenvirotech.com/contact-us/">GET A FREE QUOTE</a>
+</td></tr>
+
+<!-- HERO PHOTO
+     Replace the URL below with your banner/photo URL.
+     Example:
+     https://yourdomain.com/images/bionics-etp.jpg
+-->
+<tr><td class="image-wrap">
+<img class="hero-image"
+src="YOUR_HERO_IMAGE_URL"
+alt="Bionics Enviro Tech wastewater treatment solution"
+width="544">
+</td></tr>
+
+<!-- PRODUCTS -->
+<tr><td class="section">
+<h2 class="title">Our Bioculture Solutions</h2>
+<p class="sub">Scientific microbial formulations for diverse wastewater treatment applications.</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0"></table>
+<table width="100%" role="presentation"><tr>
+<td class="card"><div class="cardpad">
+<!-- PRODUCT PHOTO 1 -->
+<img class="photo" src="YOUR_ETP_PRODUCT_IMAGE_URL" alt="ETP Bioculture" width="256" height="150">
+<h3>ETP / CETP Bioculture</h3>
+<p>Advanced Nanozyme bioculture for industrial effluent treatment, supporting biological treatment performance and COD/BOD reduction.</p>
+<a class="btn" href="https://bionicsenvirotech.com/">LEARN MORE</a>
+</div></td>
+
+<td class="gap"></td>
+
+<td class="card"><div class="cardpad">
+<!-- PRODUCT PHOTO 2 -->
+<img class="photo" src="YOUR_STP_PRODUCT_IMAGE_URL" alt="STP Bioculture" width="256" height="150">
+<h3>STP / CSTP Bioculture</h3>
+<p>Microbial solutions designed for sewage treatment applications and stable biological treatment performance.</p>
+<a class="btn" href="https://bionicsenvirotech.com/">LEARN MORE</a>
+</div></td>
+</tr></table>
+</td></tr>
+
+<!-- THREE PHOTO CARDS -->
+<tr><td class="minirow">
+<table width="100%" role="presentation"><tr>
+
+<td class="mini"><div class="minipad">
+<img src="YOUR_AEROBIC_IMAGE_URL" alt="Aerobic Microbial Bioculture" width="170" height="82">
+<h4>Aerobic Bioculture</h4>
+<p>For aerobic industrial wastewater treatment applications.</p>
+</div></td>
+
+<td class="minigap"></td>
+
+<td class="mini"><div class="minipad">
+<img src="YOUR_ANAEROBIC_IMAGE_URL" alt="Anaerobic Microbial Bioculture" width="170" height="82">
+<h4>Anaerobic Bioculture</h4>
+<p>For anaerobic digesters and wastewater applications.</p>
+</div></td>
+
+<td class="minigap"></td>
+
+<td class="mini"><div class="minipad">
+<img src="YOUR_PLANT_IMAGE_URL" alt="Wastewater Treatment Plant" width="170" height="82">
+<h4>Plant Solutions</h4>
+<p>Support for ETP, STP, CETP and CSTP plants.</p>
+</div></td>
+
+</tr></table>
+</td></tr>
+
+<!-- WHY BIONICS -->
+<tr><td class="feature">
+<h2>Why Bionics Enviro Tech?</h2>
+<p>Bionics Enviro Tech manufactures advanced Nanozyme bioculture solutions for wastewater treatment. Our solutions are designed for industrial wastewater, sewage treatment, common treatment plants and anaerobic digesters, with applications across multiple industries.</p>
+<a class="btn" href="https://bionicsenvirotech.com/contact-us/">CONTACT OUR TEAM</a>
+</td></tr>
+
+<!-- INDUSTRIES -->
+<tr><td class="industries">
+<h2 class="title" style="font-size:18px">Industries We Serve</h2>
+<p class="sub">Wastewater treatment solutions for diverse industrial applications.</p>
+<span class="pill">TEXTILE &amp; DYE</span>
+<span class="pill">PHARMA</span>
+<span class="pill">CHEMICAL</span>
+<span class="pill">FOOD &amp; DAIRY</span>
+<span class="pill">PULP &amp; PAPER</span>
+<span class="pill">SUGAR &amp; DISTILLERY</span>
+<span class="pill">TANNERIES</span>
+<span class="pill">STP / SEWAGE</span>
+</td></tr>
+
+<!-- FINAL CTA PHOTO
+     Replace YOUR_CASE_STUDY_IMAGE_URL with a plant/site photo.
+-->
+<tr><td class="image-wrap" style="padding-bottom:25px">
+<img class="hero-image" src="YOUR_CASE_STUDY_IMAGE_URL" alt="Bionics Enviro Tech wastewater treatment application" width="544">
+</td></tr>
+
+<tr><td class="footer">
+<strong>BIONICS ENVIRO TECH</strong>
+<p>Scientific Innovative Manufacturer of Nanozyme Microbial Culture</p>
+<p>+91 90950 00090 &nbsp; | &nbsp; bionicsenvirotech@gmail.com</p>
+<p>Head Office: 2/185, Ramnagar, Vaaikaimedu, Perundurai Main Road, Erode – 638052, Tamil Nadu</p>
+<p><a href="https://bionicsenvirotech.com/">www.bionicsenvirotech.com</a></p>
+<p>
+<a href="https://bionicsenvirotech.com/">Website</a> &nbsp; • &nbsp;
+<a href="https://bionicsenvirotech.com/contact-us/">Contact</a>
+</p>
+<p style="font-size:8px;color:#9aa5a1">You are receiving this email from Bionics Enviro Tech. <a href="#">Unsubscribe</a></p>
+</td></tr>
+
+</table>
+</div>
+</body>
+</html>
